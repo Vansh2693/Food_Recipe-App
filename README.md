@@ -19,27 +19,27 @@ This is a Django-based web application for managing and sharing food recipes. Us
 
 1. Clone the repository:
 
-git clone https://github.com/Vansh2693/Food_Recipe-App.git
+    ->git clone https://github.com/Vansh2693/Food_Recipe-App.git
 
 2. Navigate to the project directory:
 
-cd core
+    ->cd core
 
 3. Install dependencies:
 
-pip install -r requirements.txt
+    ->pip install -r requirements.txt
 
-4. Create a virtual environment (optional but recommended):
+4. Create a virtual environment (optional but recommended)
 
 5. Activate the virtual environment:
 
-->cd Scripts
-->Activate
+    ->cd Scripts
+    ->Activate
 
 6. Apply migrations:
 
-python manage.py migrate
+    ->python manage.py migrate
 
 7. Run the development server:
 
-python manage.py runserver
+    ->python manage.py runserver
