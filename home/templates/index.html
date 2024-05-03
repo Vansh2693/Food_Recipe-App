@@ -1,0 +1,40 @@
+{% extends "base.html"%}
+{% block start%}
+    <h1>This template is returned by a django server</h1>
+    {{people}}
+    <table border = 1 px>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Can Vote</th>
+        </tr>
+        {%for x in people%}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{x.Name}}</td>
+            <td>{{x.Age}}</td>
+            <td {% if x.Age >= 18 %} style="background:green" {% else %} style="background:red" {% endif %}>
+                {% if x.Age >= 18 %}
+                    👍
+                {% else %}
+                    👎
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+
+        
+    </table>
+    <p>{{text|truncatechars:50}}<p>
+     
+    <p>{% if "Avocado" in fruits %}
+            Avocado available
+        {% else %}
+            Avocado not available
+        {% endif %}   
+    </p>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+
+{% endblock %}
