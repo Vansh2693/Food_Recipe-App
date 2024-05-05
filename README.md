@@ -3,7 +3,7 @@
 This is a Django-based web application for managing and sharing food recipes. Users can create, view, edit, and delete recipes, as well as interact with other users through comments and ratings.
 
 ## Features
-
+- **User Authentication** : Users can be created and sessions are maintained
 - **Recipe CRUD Operations**: Users can create, read, update, and delete their own recipes.
 - **Search and Filter**: Users can search for recipes by name, ingredient, or category. They can also filter recipes based on various criteria.
 

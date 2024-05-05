@@ -1,0 +1,56 @@
+{% extends "C:\Coding\Python\Django\1stenv\core\home\templates\base.html"%} 
+{% block start %}
+
+<div class="container mt-5">
+ 
+    <form
+    class="col-6 mx-auto card p-3 shadow-lg"
+    method="post"
+    enctype="multipart/form-data"
+  >
+    {% csrf_token %}
+    <h2>Register</h2>
+    <hr />
+
+    {% if messages %}
+    {{message.tags}}
+    <div class="alert alert-primary" role="alert">
+        {% for message in messages %}
+            {{message}}
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form2Example1">First Name</label>
+        <input type="text" id="form2Example1" name="first_name" class="form-control" />
+    </div>
+
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form2Example2">Last Name</label>
+        <input type="text" id="form2Example2" name="last_name" class="form-control" />
+    </div>
+
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form2Example3">Username</label>
+        <input type="text" id="form2Example3" name="username" class="form-control" />
+    </div>
+
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form2Example4">Password</label>
+        <input type="password" id="form2Example4" name="password" class="form-control" />
+    </div>
+
+    <p>Already have account? <a href="/login/"> Login </a></p>
+    <button
+      type="submit"
+      data-mdb-button-init
+      data-mdb-ripple-init
+      class="btn btn-primary btn-block mb-4"
+    >
+      Sign in
+    </button>
+
+    </form>
+    </div>
+{% endblock %}
+
